@@ -1,18 +1,12 @@
 pragma solidity 0.8.4;
 
 
-import "./Storage.sol";
+import "./Cats.sol";
 
 
-contract CatUpgrade is Storage {
+contract CatUpgrade is Cat {
 
-    modifier onlyOwner{
-        require(msg.sender == owner, "Only contract owner can call this function go away");
-        _;
-    }
     
-    
-
     constructor() public {
         /*
          call initialize  function, passing contract owner as argument.
@@ -24,7 +18,6 @@ contract CatUpgrade is Storage {
         
         */
         initialize(msg.sender);
-    
     }
 
     /*
@@ -47,12 +40,4 @@ contract CatUpgrade is Storage {
        _initialized = true; //INTERACTION: set the variable to true, so it cant be run twice  
     }
    
-   
-    function getTheNumberOfCats() public view returns(uint256){ 
-        return _uintStorage["Cats"];
-    } 
-    
-    function setTheNumberOfCats(uint256 toSet) public onlyOwner { 
-         _uintStorage["Cats"] = toSet;
-    }
 }
