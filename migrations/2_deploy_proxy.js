@@ -30,7 +30,7 @@ module.exports = async function (deployer, network, accounts) {
     var numberOfCats = await proxyCat.getTheNumberOfCats();
     
     //Return result in console
-    console.log(numberOfCats.toNumber()); //convert bignumber
+    console.log("Before Update: " + numberOfCats.toNumber()); //convert bignumber
 
     //Deployed update
     const catupgrade = await CatUpgrade.new();    
@@ -38,5 +38,8 @@ module.exports = async function (deployer, network, accounts) {
 
     //checking to see if storage remains
     numberOfCats = await proxyCat.getTheNumberOfCats();
-    console.log(numberOfCats.toNumber()); //return results
+    console.log("After Update: " + numberOfCats.toNumber()); //return results
+
+    //set new number through proxy
+    await proxyCat.setTheNumberOfCats(19);
 };
