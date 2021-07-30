@@ -22,6 +22,7 @@ module.exports = async function (deployer, network, accounts) {
      await proxyCat.setTheNumberOfCats(7);
 
     var numberOfCats = await proxyCat.getTheNumberOfCats();
+    
     console.log(numberOfCats.toNumber()); //convert bignumber
 
 };
