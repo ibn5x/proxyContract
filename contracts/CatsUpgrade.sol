@@ -4,7 +4,7 @@ pragma solidity 0.8.4;
 import "./Storage.sol";
 
 
-contract Cat is Storage {
+contract CatUpgrade is Storage {
 
     modifier onlyOwner{
         require(msg.sender == owner, "Only contract owner can call this function go away");

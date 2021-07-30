@@ -1,8 +1,10 @@
 const Cat = artifacts.require("Cat");
+const CatUpgrade = artifacts.require("CatUpgrade");
 const Proxy = artifacts.require("Proxy");
 
 module.exports = async function (deployer, network, accounts) {
-  
+    
+    //Deploy
     const cat = await Cat.new();
     const proxy = await Proxy.new(cat.address);
   
@@ -18,11 +20,23 @@ module.exports = async function (deployer, network, accounts) {
 
     */
  
-     var proxyCat = await Cat.at(proxy.address); 
-     await proxyCat.setTheNumberOfCats(7);
+    //Create Proxy to fool truffle 
+    var proxyCat = await Cat.at(proxy.address); 
+    
+    //Set cat amount through proxy contract
+    await proxyCat.setTheNumberOfCats(27);
 
+    //Testing to see if working
     var numberOfCats = await proxyCat.getTheNumberOfCats();
     
+    //Return result in console
     console.log(numberOfCats.toNumber()); //convert bignumber
 
+    //Deployed update
+    const catupgrade = await CatUpgrade.new();    
+    proxy.upgrade(catupgrade.address);
+
+    //checking to see if storage remains
+    numberOfCats = await proxyCat.getTheNumberOfCats();
+    console.log(numberOfCats.toNumber()); //return results
 };
