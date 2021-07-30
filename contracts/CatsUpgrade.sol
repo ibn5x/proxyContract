@@ -14,8 +14,16 @@ contract CatUpgrade is Storage {
     
 
     constructor() public {
+        /*
+         call initialize  function, passing contract owner as argument.
+
+         From perspective of functional contract upgrade itself, 
+         (CatUpgrade) not the view of the proxy...
+
+         
         
-        owner = msg.sender;
+        */
+        initialize(msg.sender);
     
     }
 
@@ -34,9 +42,9 @@ contract CatUpgrade is Storage {
         is true, ensuring our initialize function is only run once for security.
     */
     function initialize(address _owner) public {
-       require(!_initialized);
-        
-        owner = _owner;
+       require(!_initialized); //CHECK: initialized is false
+       owner = _owner; //EFFECT: set the owner
+       _initialized = true; //INTERACTION: set the variable to true, so it cant be run twice  
     }
    
    
