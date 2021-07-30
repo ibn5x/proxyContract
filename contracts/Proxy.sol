@@ -27,6 +27,7 @@ contract Proxy is Storage {
     require(currentAddress != address(0));
     bytes memory data = msg.data; //msg.data is all info about function call itself
 
+    //low level assembly code in Yull language 
     assembly {
         let result := delegatecall(gas(), implementation, add(data, 0x20), mload(data), 0, 0)
         let size := returndatasize()
