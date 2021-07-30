@@ -1491,7 +1491,7 @@
         48
       ],
       "Storage": [
-        108
+        126
       ]
     },
     "id": 49,
@@ -1514,7 +1514,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 49,
-        "sourceUnit": 109,
+        "sourceUnit": 127,
         "src": "50:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1527,7 +1527,7 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 108,
+              "referencedDeclaration": 126,
               "src": "129:7:0"
             },
             "id": 4,
@@ -1541,7 +1541,7 @@
         "id": 48,
         "linearizedBaseContracts": [
           48,
-          108
+          126
         ],
         "name": "Cat",
         "nameLocation": "122:3:0",
@@ -1599,7 +1599,7 @@
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 105,
+                          "referencedDeclaration": 123,
                           "src": "197:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1712,7 +1712,7 @@
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 105,
+                      "referencedDeclaration": 123,
                       "src": "327:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1797,7 +1797,7 @@
                       "name": "_uintStorage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "483:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
@@ -1912,7 +1912,7 @@
                         "name": "_uintStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 87,
+                        "referencedDeclaration": 105,
                         "src": "596:12:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
@@ -2042,7 +2042,7 @@
         48
       ],
       "Storage": [
-        108
+        126
       ]
     },
     "id": 49,
@@ -2065,7 +2065,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 49,
-        "sourceUnit": 109,
+        "sourceUnit": 127,
         "src": "50:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2078,7 +2078,7 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 108,
+              "referencedDeclaration": 126,
               "src": "129:7:0"
             },
             "id": 4,
@@ -2092,7 +2092,7 @@
         "id": 48,
         "linearizedBaseContracts": [
           48,
-          108
+          126
         ],
         "name": "Cat",
         "nameLocation": "122:3:0",
@@ -2150,7 +2150,7 @@
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 105,
+                          "referencedDeclaration": 123,
                           "src": "197:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -2263,7 +2263,7 @@
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 105,
+                      "referencedDeclaration": 123,
                       "src": "327:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2348,7 +2348,7 @@
                       "name": "_uintStorage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "483:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
@@ -2463,7 +2463,7 @@
                         "name": "_uintStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 87,
+                        "referencedDeclaration": 105,
                         "src": "596:12:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
@@ -2592,7 +2592,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-07-30T14:00:44.436Z",
+  "updatedAt": "2021-07-30T14:39:47.749Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
