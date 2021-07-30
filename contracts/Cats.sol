@@ -5,6 +5,17 @@ import "./Storage.sol";
 
 //set our inheritance from storage
 contract Cat is Storage {
+
+    modifier onlyOwner{
+        require(msg.sender == owner, "Only contract owner can call this function go away");
+        _;
+    }
+
+    constructor() public {
+        
+        owner = msg.sender;
+    
+    }
    
     //return our mappings
     function getTheNumberOfCats() public view returns(uint256){
