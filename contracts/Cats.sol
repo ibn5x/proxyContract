@@ -11,6 +11,18 @@ contract Cat is Storage {
         _;
     }
 
+    //allow functions to continue when under normal operation (not paused)
+    modifier whenNotPaused(){
+       require(!_paused); 
+       _;
+    }
+
+     //allow no critical functions to continue when under emergency operation (paused)
+     modifier whenPaused(){
+       require(_paused); 
+       _;
+    }
+
     constructor() public {
         
         owner = msg.sender;
@@ -23,8 +35,17 @@ contract Cat is Storage {
         return _uintStorage["Cats"];
     } 
     
-    function setTheNumberOfCats(uint256 toSet) public {
+    function setTheNumberOfCats(uint256 toSet) public whenNotPaused {
         
          _uintStorage["Cats"] = toSet;
     }
+
+       function pause() public onlyOwner whenNotPaused {
+        _paused = true;
+    }
+
+       function unPause() public onlyOwner whenPaused {
+        _paused= false;
+    }
+   
 }

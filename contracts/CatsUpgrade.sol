@@ -5,8 +5,8 @@ import "./Cats.sol";
 
 
 contract CatUpgrade is Cat {
-
     
+
     constructor() public {
         /*
          call initialize  function, passing contract owner as argument.
@@ -38,6 +38,8 @@ contract CatUpgrade is Cat {
        require(!_initialized); //CHECK: initialized is false
        owner = _owner; //EFFECT: set the owner
        _initialized = true; //INTERACTION: set the variable to true, so it cant be run twice  
+       _paused = false;
     }
-   
+
+  
 }

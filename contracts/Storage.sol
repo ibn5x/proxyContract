@@ -14,4 +14,7 @@ contract Storage {
     address public owner;
     
     bool public _initialized;
+
+    //implenting pause functionality
+    bool public _paused;
 }
